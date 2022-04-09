@@ -9,4 +9,6 @@ docker run --privileged --name $CNAME $DOCKERNAME /bin/bash -c "rm -rf /usr/lib/
 export CNID=$(docker ps -aqf "name="${CNAME})
 docker commit ${CNID} clara-wsl:v4.1
 
-# docker run --rm -it --gpus all --name clarawsl clara-wsl:v4.1  /bin/bash
+docker run --rm -it --gpus all --name clarawsl clara-wsl:v4.1  /bin/bash
+
+docker container rm $CNID
