@@ -10,3 +10,5 @@ export nnzip=$(ls | grep nnunet*.zip)
 unzip $nnzip
 rm $nnzip
 export nnzip=$(ls | grep nnunet*.ckpt)
+
+docker build -t unet .
